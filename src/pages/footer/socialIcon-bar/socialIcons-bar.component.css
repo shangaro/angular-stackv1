@@ -1,0 +1,20 @@
+:host{
+    height: 30px;
+    padding-top:4px;
+       
+}
+
+
+a{
+   
+    text-decoration:none;
+}
+
+.top-image{
+    line-height: 0px;
+    padding-left:5px;
+    vertical-align:middle;
+    font-size:25px;
+}
+
+

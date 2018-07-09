@@ -1,0 +1,34 @@
+:host{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    height:100vw;
+    background-image:url('../../../assets/aqua.jpg');
+    background-position: center center; /*center vertically and center horizontally*/
+    background-size:cover;
+
+}
+
+.signin-form{
+    min-width:300px;
+    opacity:.93;
+    background-color: white;
+    padding:20px;
+}
+
+a{
+    line-height:32px;
+}
+
+ button{
+     float: right;
+ }
+ .message{
+     float:right;
+ }
+ h4{
+     text-align:center;
+     padding-bottom: 5px;
+     color:black;
+ }

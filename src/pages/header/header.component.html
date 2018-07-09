@@ -1,0 +1,20 @@
+<div class="header" *screenLarge>
+    <img src="assets/logo.gif" alt="Google Jesus">
+    <div class="menu-area"*ngIf="!menuService.isVertical">
+        <fw-topbar></fw-topbar>
+        <fw-menu></fw-menu>
+    </div>
+</div>
+
+<div class="header-small" *screenBelowLarge>
+    <div class="small-image-holder">
+        <img class="small-image" src="assets/logo.gif">
+    </div>
+    
+    <i class="fa fa-bars" aria-hidden="true"(click)="menuService.showSmallScreenMenu($event)"></i>
+    <fw-popup-menu *ngIf="menuService.isSmallScreenMenu" [ngClass]="{'vertical-menu':menuService.isVertical}"
+    [style.right.px]="popUpRight" [style.top.px]="popUpTop"></fw-popup-menu>  
+
+
+
+</div>

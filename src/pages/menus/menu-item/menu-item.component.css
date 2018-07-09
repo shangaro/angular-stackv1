@@ -1,0 +1,54 @@
+:host{
+    display:inline-block;
+    position:relative;
+    margin-left:0;
+    margin-top:0;
+    margin-bottom:0;
+    padding:0;
+    font-size:15px;
+    line-height:15px;
+    color:rgb(250, 246, 246);
+    cursor: pointer;
+    box-sizing: border-box;
+    width:100%;
+}
+
+span{
+    pointer-events:none;
+}
+span{
+    top:1px;
+    font-size:14px;
+    margin-right:4px;
+    margin-left:8px;
+}
+.menu-item{
+    padding:10px 10px 10px 0;
+}
+.menu-item.vertical-menu{
+    padding:6px 6px 6px 0;
+}
+.menu-item:hover{
+    background-color:rgb(96, 235, 235);
+}
+.menu-item.vertical-menu:hover{
+    background-color:rgb(96, 235, 235);
+}
+:host:not(.parent-is-popup){
+    margin-left:16px;
+    width:auto;
+}
+.router-link-active{
+    background-color:rgb(96, 235, 235);
+}
+.router-link-active.vertical-menu{
+    background-color:rgb(96, 235, 235);
+}
+
+:host(.vertical-menu){
+    display:block;
+    margin-left:0;
+    margin-top:6px;
+    margin-bottom:6px;
+    color:white;
+}

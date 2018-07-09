@@ -1,0 +1,5 @@
+<div class="menu-item" [routerLink]="item.route" routerlinkActive="router-link-active"
+[ngClass]="{'vertical-menu':menuService.isVertical}" (click)="menuService.isVertical=false">
+    <span><fa-icon [icon]="item.icon"></fa-icon></span>
+    <span>{{item.text.toUpperCase()}}</span>
+</div>
