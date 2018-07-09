@@ -14,19 +14,19 @@ let initialMenuItems:IMenuItem[]=[
     {
         text:"DashBoard",
         icon:faChartPie,
-        route:'/dashboard',
+        route:'./dashboard',
         submenu:null
     },
     {
         text:"Settings",
         icon:faCogs,
-        route:'/settings',
+        route:'./settings',
         submenu:null
     },
     {
         text:"Countries",
         icon:faGlobe,
-        route:'/countries',
+        route:'./countries',
         submenu:null
     }
 ];

@@ -13,6 +13,9 @@ export const  routes:Routes=[
      path:'authenticated', component:AuthenticatedUserComponent,
     children:[
         {
+            path:'',redirectTo:'dashboard',pathMatch:'full'
+        },
+        {
             path:'dashboard',
             component:DashBoardComponent
         },

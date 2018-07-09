@@ -4,5 +4,6 @@
 </div>
 
 <div *ngIf="frameworkConfigService.showUserControls">
-    <span>SIGN IN</span>
+    <span>{{username}}</span>
+    <span class="user-control" (click)="signOut($event)">Sign out</span>
 </div>

@@ -10,7 +10,9 @@
     <div class="small-image-holder">
         <img class="small-image" src="assets/logo.gif">
     </div>
-    
+    <div class="menu-area">
+            <fw-topbar></fw-topbar>
+    </div>
     <i class="fa fa-bars" aria-hidden="true"(click)="menuService.showSmallScreenMenu($event)"></i>
     <fw-popup-menu *ngIf="menuService.isSmallScreenMenu" [ngClass]="{'vertical-menu':menuService.isVertical}"
     [style.right.px]="popUpRight" [style.top.px]="popUpTop"></fw-popup-menu>  

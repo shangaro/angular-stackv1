@@ -6,6 +6,8 @@ import { FrameworkModule } from '../pages/framework/framework.module';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
 import { RouterModule } from '@angular/router';
 import { routes } from '../shared/shared';
+import { UserService } from './user.service';
+import { UserApi } from '../shared/class-interface/userApi';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,12 @@ import { routes } from '../shared/shared';
     BrowserModule,
     FormsModule,
     FrameworkModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forChild(routes)
   ],
-  providers: [],
+  providers: [
+    UserService,
+    {provide:UserApi,useExisting:UserService} // Dependency Injection in angular uses class-interface
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

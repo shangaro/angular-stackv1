@@ -4,31 +4,40 @@
     justify-content:center;
     height:100vh;
     height:100vw;
-    background-image:url('../../../assets/aqua.jpg');
+    /* background-image:url('../../../assets/aqua.jpg'); */
     background-position: center center; /*center vertically and center horizontally*/
     background-size:cover;
+    background-color: #BAC7B7;
 
 }
 
 .signin-form{
     min-width:300px;
     opacity:.93;
-    background-color: white;
-    padding:20px;
+    background-color: rgb(238, 214, 214);
+    padding:20px
 }
 
 a{
     line-height:32px;
+    display:block;
 }
 
  button{
-     float: right;
+     float: inherit;
  }
  .message{
      float:right;
  }
- h4{
+ h5{
      text-align:center;
      padding-bottom: 5px;
      color:black;
  }
+.homepage{
+    display:inline-block;
+}
+.title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:azure;
+}
