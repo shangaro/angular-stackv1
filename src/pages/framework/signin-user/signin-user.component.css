@@ -40,4 +40,7 @@ a{
 .title{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:azure;
+    display:flex;
+    align-items:center;
+    flex-grow:0;
 }

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { faChartPie, faCogs, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faChartPie, faCogs, faGlobe, faList, faWrench } from "@fortawesome/free-solid-svg-icons";
 
 
 export interface IMenuItem{
@@ -27,6 +27,18 @@ let initialMenuItems:IMenuItem[]=[
         text:"Countries",
         icon:faGlobe,
         route:'./countries',
+        submenu:null
+    },
+    {
+        text:"ListView & Downloads",
+        icon:faList,
+        route:'./listView',
+        submenu:null
+    },
+    {
+        text:"Device Configuration",
+        icon:faWrench,
+        route:'./device-configuration',
         submenu:null
     }
 ];
