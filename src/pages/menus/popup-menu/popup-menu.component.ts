@@ -10,11 +10,11 @@ import { trigger, transition, style, animate } from "@angular/animations";
         trigger('visibilityChanged',[
             transition(':enter',[ // enter is alias to void => * or no animation state to animation state
               style({opacity:0}),
-              animate(250,style({oapcity:1}))  
+              animate(250,style({opacity:1}))  
 
             ]),
             transition(":leave",[// enter is alias to '* => void' or animation state to no animation state
-                animate(100,style({oapcity:0})) ])
+                animate(100,style({opacity:0})) ])
         ])
     ]
     

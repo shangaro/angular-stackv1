@@ -1,0 +1,15 @@
+:host{
+    display:flex;
+    flex-grow:1;
+    flex-direction: column;
+    
+}
+
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+.table{
+    width:100%;
+}

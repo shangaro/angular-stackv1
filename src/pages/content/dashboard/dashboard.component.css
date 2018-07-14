@@ -1,5 +1,15 @@
 :host{
     display:flex;
-    flex-grow:1;
-    
+    flex:1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:flex-start;
 }
+
+/* @media screen and (max-width: 500px){
+
+    host{
+        flex-direction: column;
+        align-items:column;
+    }
+} */

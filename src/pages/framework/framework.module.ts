@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import { FrameworkComponent } from './framework.component';
 import { ContentComponent } from '../content/content.component';
 import { HeaderComponent } from '../header/header.component';
@@ -23,14 +23,21 @@ import { routes } from '../../shared/shared';
 import { PopupMenuComponent } from '../menus/popup-menu/popup-menu.component';
 import { FormsModule } from '@angular/forms';
 import { SignInComponent } from './signin-user/signin-user.component';
+import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule} from '@angular/material';
+import {NoopAnimationsModule, BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MapDataTableComponent } from '../tables/mapDataTable.component';
 @NgModule({
   imports: [
-    CommonModule,
     FontAwesomeModule,
+    CommonModule,
     RouterModule.forRoot(routes),
-    FormsModule
-    
-    
+    FormsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    NoopAnimationsModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     FrameworkComponent,
@@ -47,16 +54,16 @@ import { SignInComponent } from './signin-user/signin-user.component';
     SettingsComponent,
     CountriesComponent,
     PopupMenuComponent,
-    SignInComponent
-    
+    SignInComponent,
+    MapDataTableComponent
   ],
-  providers:[
+  providers: [
     FrameworkConfigService,
     IconServiceProvider,
     ScreenService,
     MenuService
   ],
-  exports:[
+  exports: [
     FrameworkComponent
   ]
 })
