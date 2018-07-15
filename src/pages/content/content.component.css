@@ -2,11 +2,13 @@
     display: flex;
     background: color #f0fff0;;
     flex-grow: 1;
+    
 }
 
 
 .body-style{
-    padding:20px 0;
+    padding:0px 0;
     margin:1px;
     flex-grow:1;
+    
 }

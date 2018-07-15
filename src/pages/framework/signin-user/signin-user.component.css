@@ -3,11 +3,12 @@
     align-items:center;
     justify-content:center;
     height:100vh;
-    height:100vw;
+    width:100vw;
     /* background-image:url('../../../assets/aqua.jpg'); */
     background-position: center center; /*center vertically and center horizontally*/
     background-size:cover;
     background-color: #BAC7B7;
+    flex-direction: column;
 
 }
 
@@ -43,4 +44,9 @@ a{
     display:flex;
     align-items:center;
     flex-grow:0;
+}
+fw-footer{
+    position:fixed;
+    bottom:0px;
+    
 }

@@ -26,6 +26,8 @@ import { SignInComponent } from './signin-user/signin-user.component';
 import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule} from '@angular/material';
 import {NoopAnimationsModule, BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MapDataTableComponent } from '../tables/mapDataTable.component';
+import {AgmCoreModule} from '@agm/core';
+import { SettingsTableComponent } from '../tables/settings-table/settings-table.component';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -37,7 +39,9 @@ import { MapDataTableComponent } from '../tables/mapDataTable.component';
     MatInputModule,
     MatPaginatorModule,
     NoopAnimationsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AgmCoreModule.forRoot({apiKey:'AIzaSyBvxVP2-G5Z-yP-D-KAPIOqr8nrPDderzw'})
+
   ],
   declarations: [
     FrameworkComponent,
@@ -55,7 +59,8 @@ import { MapDataTableComponent } from '../tables/mapDataTable.component';
     CountriesComponent,
     PopupMenuComponent,
     SignInComponent,
-    MapDataTableComponent
+    MapDataTableComponent,
+    SettingsTableComponent
   ],
   providers: [
     FrameworkConfigService,

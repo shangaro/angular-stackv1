@@ -1,15 +1,22 @@
 :host{
     display:flex;
-    flex:1;
     flex-direction: row;
     flex-wrap: wrap;
     align-items:flex-start;
+    justify-content:flex-start;
+    
 }
 
-/* @media screen and (max-width: 500px){
+.gmap{
+    flex-grow:1;
+    height:100vh;
+}
+fw-mapDataTable{
+    flex: 0 1 500px;
+    display:flex;
+   
+}
 
-    host{
-        flex-direction: column;
-        align-items:column;
-    }
-} */
+
+
+

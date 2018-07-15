@@ -1,10 +1,11 @@
 :host{
     display:flex;
-    flex-grow:1;
+    flex-grow:0;
     align-items:center;
     justify-content:center;
-    background-color:black;
+    background-color:#006666;
     min-height: 4em;
+    width:100%;
     
 
 
