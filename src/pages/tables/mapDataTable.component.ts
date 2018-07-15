@@ -12,6 +12,7 @@ import {MatPaginator, MatTableDataSource} from '@angular/material';
 export class MapDataTableComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  selected:string="googleMap";
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 

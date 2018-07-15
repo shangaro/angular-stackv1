@@ -9,9 +9,23 @@
 
 .mat-form-field {
     font-size: 14px;
-    width: 100%;
+    width: 50%;
   }
 .table{
     width:100%;
-    border: 4px  black
+    
+}
+.row-header{
+    background-color:#006666;
+   
+}
+.mat-header-cell{
+    color:white;
+    font-size:14px;
+}
+/* .mat-cell{
+    background-color:#f0f0f0;
+} */
+mat-paginator{
+    background-color:#f0f0f0;
 }

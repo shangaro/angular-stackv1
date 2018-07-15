@@ -23,7 +23,7 @@ import { routes } from '../../shared/shared';
 import { PopupMenuComponent } from '../menus/popup-menu/popup-menu.component';
 import { FormsModule } from '@angular/forms';
 import { SignInComponent } from './signin-user/signin-user.component';
-import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule} from '@angular/material';
+import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule,MatSelectModule} from '@angular/material';
 import {NoopAnimationsModule, BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MapDataTableComponent } from '../tables/mapDataTable.component';
 import {AgmCoreModule} from '@agm/core';
@@ -40,6 +40,7 @@ import { SettingsTableComponent } from '../tables/settings-table/settings-table.
     MatPaginatorModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
+    MatSelectModule,
     AgmCoreModule.forRoot({apiKey:'AIzaSyBvxVP2-G5Z-yP-D-KAPIOqr8nrPDderzw'})
 
   ],
