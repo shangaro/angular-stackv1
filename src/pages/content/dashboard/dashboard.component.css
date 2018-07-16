@@ -14,6 +14,7 @@
 fw-mapDataTable{
     flex: 0 1 500px;
     display:flex;
+    margin:4px;
    
 }
 

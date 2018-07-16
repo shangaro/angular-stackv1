@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from '../shared/shared';
 import { UserService } from './user.service';
 import { UserApi } from '../shared/class-interface/userApi';
+import { MomentDateModule, MatMomentDateModule } from '../../node_modules/@angular/material-moment-adapter';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UserApi } from '../shared/class-interface/userApi';
     BrowserModule,
     FormsModule,
     FrameworkModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MatMomentDateModule
   ],
   providers: [
     UserService,

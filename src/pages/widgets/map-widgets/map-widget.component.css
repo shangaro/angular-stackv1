@@ -1,0 +1,15 @@
+:host{
+    display:flex;
+    flex-grow:1;
+    align-items:flex-start;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+.dateInput{
+    text-align: center;
+    
+}
+.datepicker2{
+    font-size:13px;
+}

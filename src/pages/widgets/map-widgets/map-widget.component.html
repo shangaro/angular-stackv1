@@ -1,0 +1,31 @@
+
+<mat-form-field>
+    <mat-select placeholder="Select Map Type">
+        <mat-option *ngFor="let type of mapTypes"[value]="type.value">{{type.viewValue}}</mat-option>       
+    </mat-select>
+</mat-form-field>
+
+<!-- plot type select form -->
+
+<mat-form-field>
+    <mat-select placeholder="Select Plot Type">
+        <mat-option *ngFor="let type of plotTypes"[value]="type.value">{{type.viewValue}}</mat-option>       
+    </mat-select>
+</mat-form-field>
+<fw-datepicker></fw-datepicker>  
+
+<div class="datepicker2">
+    <mat-form-field appearance="outline">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-label>End Date</mat-label>
+        <input matInput [matDatepicker]="picker" class="dateInput">
+        <mat-datepicker #picker startView="month" [startAt]="startDate"></mat-datepicker>
+</mat-form-field>
+</div>
+
+
+
+
+
+
+

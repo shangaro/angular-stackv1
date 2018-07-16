@@ -23,9 +23,15 @@
     color:white;
     font-size:14px;
 }
-/* .mat-cell{
-    background-color:#f0f0f0;
-} */
+.mat-cell{
+   
+}
 mat-paginator{
     background-color:#f0f0f0;
 }
+.widget{
+    font-size: 14px;
+}
+
+
+

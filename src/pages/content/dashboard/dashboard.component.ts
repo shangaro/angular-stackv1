@@ -1,5 +1,5 @@
 import { } from 'googlemaps';
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild, Input, ViewChildren } from "@angular/core";
 declare var google:any;
 @Component({
     selector:'content-dashboard',
@@ -8,7 +8,7 @@ declare var google:any;
 })
 export class DashBoardComponent implements OnInit{
      
-    @ViewChild('gmap') gmapElement:any;
+    @ViewChild('gmap')gmapElement:any;
     map:google.maps.Map;
     latitude:any;
     longitude:any;

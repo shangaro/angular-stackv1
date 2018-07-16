@@ -23,11 +23,13 @@ import { routes } from '../../shared/shared';
 import { PopupMenuComponent } from '../menus/popup-menu/popup-menu.component';
 import { FormsModule } from '@angular/forms';
 import { SignInComponent } from './signin-user/signin-user.component';
-import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule,MatSelectModule} from '@angular/material';
+import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule,MatSelectModule, MatDatepickerModule} from '@angular/material';
 import {NoopAnimationsModule, BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MapDataTableComponent } from '../tables/mapDataTable.component';
 import {AgmCoreModule} from '@agm/core';
 import { SettingsTableComponent } from '../tables/settings-table/settings-table.component';
+import { MapWidgetComponent } from '../widgets/map-widgets/map-widget.component';
+import { DatePickerComponent } from '../widgets/datepicker/datepicker.component';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -41,7 +43,8 @@ import { SettingsTableComponent } from '../tables/settings-table/settings-table.
     NoopAnimationsModule,
     BrowserAnimationsModule,
     MatSelectModule,
-    AgmCoreModule.forRoot({apiKey:'AIzaSyBvxVP2-G5Z-yP-D-KAPIOqr8nrPDderzw'})
+    AgmCoreModule.forRoot({apiKey:'AIzaSyBvxVP2-G5Z-yP-D-KAPIOqr8nrPDderzw'}),
+    MatDatepickerModule
 
   ],
   declarations: [
@@ -61,7 +64,9 @@ import { SettingsTableComponent } from '../tables/settings-table/settings-table.
     PopupMenuComponent,
     SignInComponent,
     MapDataTableComponent,
-    SettingsTableComponent
+    SettingsTableComponent,
+    MapWidgetComponent,
+    DatePickerComponent
   ],
   providers: [
     FrameworkConfigService,
