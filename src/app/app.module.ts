@@ -8,7 +8,15 @@ import { RouterModule } from '@angular/router';
 import { routes } from '../shared/shared';
 import { UserService } from './user.service';
 import { UserApi } from '../shared/class-interface/userApi';
-import { MomentDateModule, MatMomentDateModule } from '../../node_modules/@angular/material-moment-adapter';
+import {MatMomentDateModule } from '../../node_modules/@angular/material-moment-adapter';
+import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +28,11 @@ import { MomentDateModule, MatMomentDateModule } from '../../node_modules/@angul
     FormsModule,
     FrameworkModule,
     RouterModule.forChild(routes),
-    MatMomentDateModule
+    MatMomentDateModule,
+    PDFExportModule,
+    BrowserAnimationsModule,
+    ButtonsModule,
+    DateInputsModule
   ],
   providers: [
     UserService,

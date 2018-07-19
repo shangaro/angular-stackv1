@@ -1,7 +1,1 @@
-
-<mat-form-field appearance="outline">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-label>Start Date</mat-label>
-        <input matInput [matDatepicker]="picker" class="dateInput">
-        <mat-datepicker #picker startView="month" [startAt]="startDate"></mat-datepicker>
-</mat-form-field>
+<kendo-datepicker [value]="value" [format]="'yyyy-MMM-dd'"></kendo-datepicker>

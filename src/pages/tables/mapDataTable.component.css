@@ -9,12 +9,9 @@
 
 .mat-form-field {
     font-size: 14px;
-    width: 50%;
+    width: 40%;
   }
-.table{
-    width:100%;
-    
-}
+
 .row-header{
     background-color:#006666;
    
@@ -28,10 +25,18 @@
 }
 mat-paginator{
     background-color:#f0f0f0;
-}
-.widget{
-    font-size: 14px;
+    
 }
 
+.datepicker{
+    display:flex;
+    flex-direction: row;
+    font-size:14px;
+    font-style: normal;
+    align-items:baseline;
+    
+    
+
+}
 
 

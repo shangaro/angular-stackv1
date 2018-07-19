@@ -6,8 +6,5 @@ import { Component } from "@angular/core";
     styleUrls:['./datepicker.component.css']
 })
 export class DatePickerComponent{
-    
-    currentDate=new Date();
-    startDate=this.currentDate.getDate()+'/'+ (this.currentDate.getMonth()+1) + '/'+this.currentDate.getFullYear();
-
+    value:Date=new Date();
 }

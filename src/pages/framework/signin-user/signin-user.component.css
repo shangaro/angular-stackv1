@@ -13,7 +13,7 @@
 }
 
 .signin-form{
-    min-width:300px;
+    /* min-width:300px; */
     opacity:.93;
     background-color: rgb(238, 214, 214);
     padding:20px

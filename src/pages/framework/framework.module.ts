@@ -29,6 +29,8 @@ import { MapDataTableComponent } from '../tables/mapDataTable.component';
 import {AgmCoreModule} from '@agm/core';
 import { SettingsTableComponent } from '../tables/settings-table/settings-table.component';
 import { MapWidgetComponent } from '../widgets/map-widgets/map-widget.component';
+import {ButtonModule, ButtonGroupModule} from '@progress/kendo-angular-buttons';
+import { DateInputsModule, DateInputComponent } from '@progress/kendo-angular-dateinputs';
 import { DatePickerComponent } from '../widgets/datepicker/datepicker.component';
 @NgModule({
   imports: [
@@ -44,7 +46,9 @@ import { DatePickerComponent } from '../widgets/datepicker/datepicker.component'
     BrowserAnimationsModule,
     MatSelectModule,
     AgmCoreModule.forRoot({apiKey:'AIzaSyBvxVP2-G5Z-yP-D-KAPIOqr8nrPDderzw'}),
-    MatDatepickerModule
+    ButtonModule,
+    ButtonGroupModule,
+    DateInputsModule
 
   ],
   declarations: [

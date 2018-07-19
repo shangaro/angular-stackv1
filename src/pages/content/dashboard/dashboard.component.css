@@ -1,5 +1,6 @@
 :host{
     display:flex;
+    flex-grow:1;
     flex-direction: row;
     flex-wrap: wrap;
     align-items:flex-start;
@@ -12,8 +13,8 @@
     height:100vh;
 }
 fw-mapDataTable{
-    flex: 0 1 500px;
-    display:flex;
+    flex-grow:1;
+    flex:0 1 350px;
     margin:4px;
    
 }
