@@ -3,7 +3,7 @@
     flex-grow:1;
     flex-direction: column;
     align-items:column;
-    justify-content: space-between;
+    justify-content: column;
     
 }
 
@@ -21,9 +21,7 @@
     color:white;
     font-size:14px;
 }
-.mat-cell{
-   
-}
+
 mat-paginator{
     background-color:#f0f0f0;
     

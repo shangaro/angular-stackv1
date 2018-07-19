@@ -13,6 +13,8 @@ import { PDFExportModule } from '@progress/kendo-angular-pdf-export';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { GridModule } from '@progress/kendo-angular-grid';
+
 
 
 
@@ -32,7 +34,8 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
     PDFExportModule,
     BrowserAnimationsModule,
     ButtonsModule,
-    DateInputsModule
+    DateInputsModule,
+    GridModule
   ],
   providers: [
     UserService,

@@ -32,6 +32,7 @@ import { MapWidgetComponent } from '../widgets/map-widgets/map-widget.component'
 import {ButtonModule, ButtonGroupModule} from '@progress/kendo-angular-buttons';
 import { DateInputsModule, DateInputComponent } from '@progress/kendo-angular-dateinputs';
 import { DatePickerComponent } from '../widgets/datepicker/datepicker.component';
+import { GridModule, PDFModule } from '../../../node_modules/@progress/kendo-angular-grid';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -48,7 +49,9 @@ import { DatePickerComponent } from '../widgets/datepicker/datepicker.component'
     AgmCoreModule.forRoot({apiKey:'AIzaSyBvxVP2-G5Z-yP-D-KAPIOqr8nrPDderzw'}),
     ButtonModule,
     ButtonGroupModule,
-    DateInputsModule
+    DateInputsModule,
+    GridModule,
+    PDFModule
 
   ],
   declarations: [
