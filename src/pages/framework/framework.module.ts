@@ -32,7 +32,7 @@ import { MapWidgetComponent } from '../widgets/map-widgets/map-widget.component'
 import {ButtonModule, ButtonGroupModule} from '@progress/kendo-angular-buttons';
 import { DateInputsModule, DateInputComponent } from '@progress/kendo-angular-dateinputs';
 import { DatePickerComponent } from '../widgets/datepicker/datepicker.component';
-import { GridModule, PDFModule } from '../../../node_modules/@progress/kendo-angular-grid';
+import { GridModule, PDFModule,ExcelModule } from '../../../node_modules/@progress/kendo-angular-grid';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -51,7 +51,7 @@ import { GridModule, PDFModule } from '../../../node_modules/@progress/kendo-ang
     ButtonGroupModule,
     DateInputsModule,
     GridModule,
-    PDFModule
+    PDFModule,ExcelModule
 
   ],
   declarations: [

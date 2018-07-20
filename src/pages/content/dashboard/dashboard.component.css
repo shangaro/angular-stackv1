@@ -14,9 +14,7 @@
     
 }
 fw-mapDataTable{
-    flex-grow:1;
-    flex:0 1 450px;
-    margin:2px;
+   
    
    
 }
@@ -29,6 +27,18 @@ fw-mapDataTable{
     justify-content: center;
 }
 
+.widget{
+   display:inline-block;
+}
 
+.mapTable{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: flex-start;
+    flex-grow:1;
+    flex:0 1 450px;
+    margin:2px;
+}
 
 
