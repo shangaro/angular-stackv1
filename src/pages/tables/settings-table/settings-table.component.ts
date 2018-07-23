@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { products } from "./products";
+import { ExcelExportData } from "@progress/kendo-angular-excel-export";
 
 @Component({
     selector:'fw-settings-table',
@@ -9,4 +10,13 @@ import { products } from "./products";
 
 export class SettingsTableComponent{
     data:any[]=products;
+
+    public allData(): ExcelExportData {
+        const result: ExcelExportData =  {
+            data:products,
+            group: null
+        };
+
+        return result;
+    }
 }
