@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, OnDestroy } from "@angular/core";
 import { faChartPie, faCogs, faGlobe, faList, faWrench } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -44,7 +44,8 @@ let initialMenuItems:IMenuItem[]=[
 ];
 
 @Injectable()
-export class MenuService{
+export class MenuService implements OnDestroy{
+   
      
     menuItems:Array<IMenuItem>=initialMenuItems;
     isVertical:boolean=false;
@@ -54,6 +55,10 @@ export class MenuService{
 
    showSmallScreenMenu($event){
         this.isSmallScreenMenu=!this.isSmallScreenMenu;
+   }
+
+   ngOnDestroy(): void {
+    this.isSmallScreenMenu=false;
    }
 }
 

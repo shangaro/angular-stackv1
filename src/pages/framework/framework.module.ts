@@ -17,7 +17,6 @@ import { SocialIconBarsComponent } from '../footer/socialIcon-bar/socialIcons-ba
 import { TopBarComponent } from '../header/topbar/topbar.component';
 import { DashBoardComponent } from '../content/dashboard/dashboard.component';
 import { SettingsComponent } from '../content/settings/settings.components';
-import { CountriesComponent } from '../content/countries/countries.component';
 import {RouterModule} from '@angular/router';
 import { routes } from '../../shared/shared';
 import { PopupMenuComponent } from '../menus/popup-menu/popup-menu.component';
@@ -33,6 +32,8 @@ import {ButtonModule, ButtonGroupModule} from '@progress/kendo-angular-buttons';
 import { DateInputsModule, DateInputComponent } from '@progress/kendo-angular-dateinputs';
 import { DatePickerComponent } from '../widgets/datepicker/datepicker.component';
 import { GridModule, PDFModule,ExcelModule } from '../../../node_modules/@progress/kendo-angular-grid';
+import { DeviceConfigurationComponent } from '../content/device-configuration/device-configuration.component';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -51,7 +52,8 @@ import { GridModule, PDFModule,ExcelModule } from '../../../node_modules/@progre
     ButtonGroupModule,
     DateInputsModule,
     GridModule,
-    PDFModule,ExcelModule
+    PDFModule,ExcelModule,
+    DropDownsModule
 
   ],
   declarations: [
@@ -67,13 +69,13 @@ import { GridModule, PDFModule,ExcelModule } from '../../../node_modules/@progre
     MenuItemComponent,
     DashBoardComponent,
     SettingsComponent,
-    CountriesComponent,
     PopupMenuComponent,
     SignInComponent,
     MapDataTableComponent,
     SettingsTableComponent,
     MapWidgetComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    DeviceConfigurationComponent
   ],
   providers: [
     FrameworkConfigService,
