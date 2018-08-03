@@ -1,0 +1,15 @@
+:host{
+    width:400px;
+    display:flex;
+    flex-grow:1;
+    
+}
+
+kendo-grid{
+    flex:0 1 100px;
+}
+
+kendo-upload{
+    flex-grow:1;
+    min-width:300px;
+}

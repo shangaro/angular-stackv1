@@ -6,6 +6,7 @@ import { AuthenticatedUserComponent } from '../app/authenticated-user/authentica
 import { SignInComponent } from '../pages/framework/signin-user/signin-user.component';
 import { DeviceConfigurationComponent } from '../pages/content/device-configuration/device-configuration.component';
 
+
 export const  routes:Routes=[
  {
      path:'signin',component:SignInComponent},

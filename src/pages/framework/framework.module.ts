@@ -22,18 +22,24 @@ import { routes } from '../../shared/shared';
 import { PopupMenuComponent } from '../menus/popup-menu/popup-menu.component';
 import { FormsModule } from '@angular/forms';
 import { SignInComponent } from './signin-user/signin-user.component';
-import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule,MatSelectModule, MatDatepickerModule} from '@angular/material';
+import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule,MatSelectModule, MatDatepickerModule, MatProgressSpinnerModule} from '@angular/material';
 import {NoopAnimationsModule, BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MapDataTableComponent } from '../tables/mapDataTable.component';
+import { MapDataTableComponent } from '../tables/mapDataTable/mapDataTable.component';
 import {AgmCoreModule} from '@agm/core';
 import { SettingsTableComponent } from '../tables/settings-table/settings-table.component';
 import { MapWidgetComponent } from '../widgets/map-widgets/map-widget.component';
 import {ButtonModule, ButtonGroupModule} from '@progress/kendo-angular-buttons';
 import { DateInputsModule, DateInputComponent } from '@progress/kendo-angular-dateinputs';
 import { DatePickerComponent } from '../widgets/datepicker/datepicker.component';
-import { GridModule, PDFModule,ExcelModule } from '../../../node_modules/@progress/kendo-angular-grid';
+import { GridModule, PDFModule,ExcelModule } from '@progress/kendo-angular-grid';
 import { DeviceConfigurationComponent } from '../content/device-configuration/device-configuration.component';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { LayoutModule } from '@progress/kendo-angular-layout';
+import { DeviceConfigurationTableComponent } from '../tables/device-configuration-table/device-configuration-table.component';
+import { UploadInterceptor } from '../../interceptors/upload.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { UploadModule } from '@progress/kendo-angular-upload';
+import { UploadTableComponent } from '../tables/upload-table/upload-table.component';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -53,7 +59,10 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     DateInputsModule,
     GridModule,
     PDFModule,ExcelModule,
-    DropDownsModule
+    DropDownsModule,
+    LayoutModule,
+    MatProgressSpinnerModule,
+    UploadModule
 
   ],
   declarations: [
@@ -75,13 +84,19 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
     SettingsTableComponent,
     MapWidgetComponent,
     DatePickerComponent,
-    DeviceConfigurationComponent
+    DeviceConfigurationComponent,
+    DeviceConfigurationTableComponent,
+    UploadTableComponent
   ],
   providers: [
     FrameworkConfigService,
     IconServiceProvider,
     ScreenService,
-    MenuService
+    MenuService,
+    {
+      provide:HTTP_INTERCEPTORS, useClass:UploadInterceptor,multi:true
+    }
+
   ],
   exports: [
     FrameworkComponent

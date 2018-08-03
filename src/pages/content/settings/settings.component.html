@@ -1,2 +1,3 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
 <fw-mapDataTable></fw-mapDataTable>
-<fw-settings-table></fw-settings-table>
+<fw-settings-table *ngIf="!loading"></fw-settings-table>

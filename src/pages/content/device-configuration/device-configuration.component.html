@@ -1,30 +1,25 @@
 <div class ="column">
     <p>
-        Choose ONE device configuration item from one of the main categories provided below:
+                Choose ONE device configuration item from one of the main categories provided below:
+    </p>
+    <kendo-panelbar [items]="panelItems"animate="true" class="panel-bar"></kendo-panelbar>
+</div>
+
+<div class ="column">
+    <p>
+            Select one or more device from the list. Configuration changes will be sent to ALL selected devices.
     </p>
     <kendo-dropdownlist
-    [defaultItem]="defaultItem"
-    [data]="listItems"
+    [defaultItem]="defaultDevice"
+    [data]="deviceList"
     [textField]="'viewValue'"
     [valueField]="'value'"></kendo-dropdownlist>
+
+    <fw-device-config-table class="device-config-table"></fw-device-config-table>
+
 </div>
+
 <div class ="column">
-        <p>
-                Choose ONE device configuration item from one of the main categories provided below:
-            </p>
-            <kendo-dropdownlist
-            [defaultItem]="defaultItem"
-            [data]="listItems"
-            [textField]="'viewValue'"
-            [valueField]="'value'"></kendo-dropdownlist>
+    <fw-upload-table></fw-upload-table>
 </div>
-<div class ="column">
-        <p>
-                Choose ONE device configuration item from one of the main categories provided below:
-            </p>
-            <kendo-dropdownlist
-            [defaultItem]="defaultItem"
-            [data]="listItems"
-            [textField]="'viewValue'"
-            [valueField]="'value'"></kendo-dropdownlist>
-</div>
+

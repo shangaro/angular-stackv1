@@ -78,10 +78,11 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "src/styles.css",
+              "src/variables.scss",
               {
-                "input": "node_modules/@progress/kendo-theme-default/scss/all.scss"
-              },
-              "src/styles.css"
+                "input": "node_modules/@progress/kendo-theme-bootstrap/scss/all.scss"
+              }
             ],
             "scripts": [],
             "assets": [
