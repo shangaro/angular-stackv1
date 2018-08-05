@@ -1,15 +1,16 @@
 :host{
-    width:400px;
+    min-width:350px;
     display:flex;
     flex-grow:1;
+    align-items:flex-start;
+    justify-content:flex-start;
     
 }
 
 kendo-grid{
-    flex:0 1 100px;
+    flex:0 1 150px;
 }
 
 kendo-upload{
     flex-grow:1;
-    min-width:300px;
 }

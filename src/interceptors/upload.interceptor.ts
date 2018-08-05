@@ -1,5 +1,5 @@
-import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpProgressEvent, HttpEventType, HttpResponse } from "../../node_modules/@angular/common/http";
-import { Injectable } from "../../node_modules/@angular/core";
+import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpProgressEvent, HttpEventType, HttpResponse } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 import { Observable} from "rxjs";
 import{concat} from "rxjs/observable/concat";
 import {of} from "rxjs/observable/of";

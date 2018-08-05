@@ -1,8 +1,15 @@
 <kendo-grid [data]="selectedDeviceList">
     <kendo-grid-column field="DeviceID" title="Sel ID"></kendo-grid-column>
 </kendo-grid>
-<kendo-upload
-      [saveUrl]="uploadSaveUrl"
-      [removeUrl]="uploadRemoveUrl"
-      [restrictions]="fileRestrictions"></kendo-upload>
+<div class="container">
+    <kendo-upload
+        [saveUrl]="uploadSaveUrl"
+        [removeUrl]="uploadRemoveUrl"
+        [restrictions]="fileRestrictions">
+  </kendo-upload>
+  <p>  
+     Select only files with "{{deviceConfigService.getFileExtensionName()}}" extension</p>
+
+</div>
+
 

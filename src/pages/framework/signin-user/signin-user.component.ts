@@ -16,7 +16,7 @@ export class SignInComponent implements OnDestroy{
     
     forErrorMessage:string;
     submitting:boolean=false;
-    constructor( private userApi:UserApi,private userService:UserService,private router:Router){
+    constructor( private userApi:UserApi,private router:Router){
         
     }
 

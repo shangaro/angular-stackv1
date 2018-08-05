@@ -1,5 +1,5 @@
 :host{
-    width:400px;
+    min-width:350px;
     display:flex;
     flex-grow:1;
     padding:20px 0 20px 0;

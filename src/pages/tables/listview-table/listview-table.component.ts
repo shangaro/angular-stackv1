@@ -3,12 +3,12 @@ import { products } from "./products";
 import { ExcelExportData } from "@progress/kendo-angular-excel-export";
 
 @Component({
-    selector:'fw-settings-table',
-    templateUrl:'./settings-table.component.html',
-    styleUrls:['./settings-table.component.css']
+    selector:'fw-listview-table',
+    templateUrl:'./listview-table.component.html',
+    styleUrls:['./listview-table.component.css']
 })
 
-export class SettingsTableComponent{
+export class ListViewTableComponent{
     data:any[]=products;
 
     public allData(): ExcelExportData {

@@ -26,7 +26,6 @@ import {MatTableModule, MatFormFieldModule, MatInputModule, MatPaginatorModule,M
 import {NoopAnimationsModule, BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MapDataTableComponent } from '../tables/mapDataTable/mapDataTable.component';
 import {AgmCoreModule} from '@agm/core';
-import { SettingsTableComponent } from '../tables/settings-table/settings-table.component';
 import { MapWidgetComponent } from '../widgets/map-widgets/map-widget.component';
 import {ButtonModule, ButtonGroupModule} from '@progress/kendo-angular-buttons';
 import { DateInputsModule, DateInputComponent } from '@progress/kendo-angular-dateinputs';
@@ -40,6 +39,11 @@ import { UploadInterceptor } from '../../interceptors/upload.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UploadModule } from '@progress/kendo-angular-upload';
 import { UploadTableComponent } from '../tables/upload-table/upload-table.component';
+import { DeviceConfigService } from '../../services/device-config.service';
+import { IDeviceConfigService } from '../../shared/class-interface/idevice-config.service';
+import { ListViewComponent } from '../content/listview/listview.component';
+import { ListViewTableComponent } from '../tables/listview-table/listview-table.component';
+import { PanelRouterComponent } from './panel-router-destination/panel-router.component';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -81,21 +85,28 @@ import { UploadTableComponent } from '../tables/upload-table/upload-table.compon
     PopupMenuComponent,
     SignInComponent,
     MapDataTableComponent,
-    SettingsTableComponent,
+    ListViewTableComponent,
     MapWidgetComponent,
     DatePickerComponent,
     DeviceConfigurationComponent,
     DeviceConfigurationTableComponent,
-    UploadTableComponent
+    UploadTableComponent,
+    ListViewComponent,
+    PanelRouterComponent
   ],
   providers: [
     FrameworkConfigService,
     IconServiceProvider,
     ScreenService,
     MenuService,
+    DeviceConfigService,
     {
       provide:HTTP_INTERCEPTORS, useClass:UploadInterceptor,multi:true
-    }
+    },
+    {
+      provide:IDeviceConfigService, useExisting:DeviceConfigService
+    },
+   
 
   ],
   exports: [

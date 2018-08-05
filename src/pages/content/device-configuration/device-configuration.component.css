@@ -13,12 +13,12 @@
     flex-direction:column;
     flex-grow:1;
     margin: 2px;
-    align-items: center;
-    justify-content:center;
+    align-items: flex-start;
+    justify-content:flex-start;
 
 }
 p{
-    max-width: 400px;
+    max-width: 350px;
     display:block;
     font-family: Arial, Helvetica, sans-serif;
     color:black;
@@ -27,11 +27,17 @@ p{
 }
 
 kendo-panelbar{
-    position:relative;
-    min-width:400px;
+    min-width:350px;
 }
 kendo-dropdownlist{
-    position:relative;
-    min-width:400px;
+    min-width:350px;
+}
+.device-config-table{
+    width:350px;
+}
+.placeholder{
+   display:flex;
+   position:relative;
+   width:350px;
 }
 
