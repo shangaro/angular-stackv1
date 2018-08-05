@@ -23,7 +23,7 @@ import { trigger, style, transition, animate } from "@angular/animations";
 export class MenuComponent{
    
 
-    constructor(private menuService:MenuService){
+    constructor(public menuService:MenuService){
 
         
     }

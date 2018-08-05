@@ -20,7 +20,7 @@ export class UploadTableComponent{
     ];
     
     
-    constructor(private deviceConfigService:IDeviceConfigService){
+    constructor(public deviceConfigService:IDeviceConfigService){
 
     }
     // fileExtension=this.deviceConfigService.getFileExtensionName().toLowerCase();

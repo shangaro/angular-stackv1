@@ -21,7 +21,7 @@ import { trigger, transition, style, animate } from "@angular/animations";
 })
 export class PopupMenuComponent{
     @Input() menu:Array<IMenuItem>;
-    constructor(private menuService:MenuService){
+    constructor(public menuService:MenuService){
     }
 
     TogglePopUpMenu(){

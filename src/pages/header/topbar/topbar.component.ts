@@ -13,8 +13,8 @@ import { UserApi } from "../../../shared/class-interface/userApi";
 export class TopBarComponent{
 
     private username:string;
-    constructor(private frameworkConfigService:FrameworkConfigService,
-                private menuService:MenuService,private userApi:UserApi){
+    constructor(public frameworkConfigService:FrameworkConfigService,
+                public menuService:MenuService,private userApi:UserApi){
 
         this.username=this.userApi.getUserName()==undefined ? "":this.userApi.getUserName();
     }

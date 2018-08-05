@@ -14,8 +14,9 @@ import { Subscription } from "rxjs";
 export class SignInComponent implements OnDestroy{
     subscription:Subscription;
     
-    forErrorMessage:string;
+    formErrorMessage:string;
     submitting:boolean=false;
+    formError:boolean=false;
     constructor( private userApi:UserApi,private router:Router){
         
     }
@@ -32,7 +33,9 @@ export class SignInComponent implements OnDestroy{
             (err)=>{
                 this.submitting=false;
                 console.log('got error',err);
-                this.forErrorMessage=err;
+                this.formErrorMessage=err;
+                this.formError=true;
+
             });
             
         }

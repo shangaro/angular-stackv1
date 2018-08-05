@@ -18,7 +18,7 @@ export class MenuItemComponent{
  mouseInPopup=false;
  popupLeft=0;
  popupTop=34;
- constructor(private menuService:MenuService){
+ constructor(public menuService:MenuService){
 
  }
 }

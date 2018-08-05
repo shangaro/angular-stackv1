@@ -9,7 +9,7 @@ import { ScreenService } from "../../../services/screen.service";
 })
 export class SocialIconBarsComponent{
     iconStore:any={};
-    constructor(private frameworkConfigService:FrameworkConfigService,private screenService:ScreenService){
+    constructor(public frameworkConfigService:FrameworkConfigService,public screenService:ScreenService){
        
     }
 }
