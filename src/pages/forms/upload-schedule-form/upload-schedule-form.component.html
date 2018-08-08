@@ -1,0 +1,23 @@
+
+<fw-singlecolumn-table></fw-singlecolumn-table>
+<div class="container" *ngIf="!deviceConfigService.getDeviceConfigName().toLowerCase().startsWith('clear')">
+        <p *ngIf=!deviceConfigService.hasFirstLetterVowel>Upload a {{deviceConfigService.getDeviceConfigName()}}</p>
+        <p *ngIf=deviceConfigService.hasFirstLetterVowel>Upload an {{deviceConfigService.getDeviceConfigName()}}</p>
+    
+        <kendo-upload
+            [saveUrl]="deviceConfigService.hasFirstLetterVoweluploadSaveUrl"
+            [removeUrl]="uploadRemoveUrl"
+            [restrictions]="fileRestrictions">
+      </kendo-upload>
+      <p>  
+         Select only files with "{{deviceConfigService.getFileExtensionName()}}" extension</p>
+    
+</div>
+<div class="container" *ngIf="deviceConfigService.getDeviceConfigName().toLowerCase().startsWith('clear')">
+    <p>{{deviceConfigService.getDeviceConfigName()}}</p>
+    <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="c1" class="k-checkbox" [(ngModel)]="checked"/>
+            &nbsp;<label class="k-checkbox-label" for="c1"><strong>{{deviceConfigService.getDeviceConfigName()}}</strong></label><br/>          
+    </div>
+    <button kendoButton [iconClass]="'fa fa-file fa-fw'">Transmit</button>
+</div>

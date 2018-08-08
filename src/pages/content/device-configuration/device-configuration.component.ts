@@ -1,10 +1,12 @@
 import {Component, OnChanges} from '@angular/core';
 import { ISelect } from '../../widgets/map-widgets/map-widget.component';
-import { PanelBarItemModel } from '@progress/kendo-angular-layout';
 import { DeviceConfigService } from '../../../services/device-config.service';
 import { IDeviceConfigService } from '../../../shared/class-interface/idevice-config.service';
-import { UploadTableComponent } from '../../tables/upload-table/upload-table.component';
 import { MenuService } from '../../../services/menu.service';
+import { State,process } from '@progress/kendo-data-query';
+import { GridDataResult, DataStateChangeEvent, RowArgs } from '../../../../node_modules/@progress/kendo-angular-grid';
+import { DeviceData } from '../../../shared/deviceData';
+import { IDevice } from '../../tables/singlecolumn-table/singlecolumn-table.component';
 @Component({
 selector:'fw-device-configuration',
 templateUrl:'./device-configuration.component.html',
@@ -29,58 +31,27 @@ export class DeviceConfigurationComponent{
     public defaultDevice:ISelect={
         value:null,viewValue:'Choose a device family'
     }
-   
+    public mySelection:IDevice[]=[];
+    public state: State = {
+        skip: 0,
+        take: 5,
+    };
 
-    private panelItems: Array<PanelBarItemModel> = [
-        <PanelBarItemModel> {title: 'Scheduling', selected:true,expanded:false, children: [
-                <PanelBarItemModel> {title: 'Send GPS Schedule',content:UploadTableComponent },
-                <PanelBarItemModel> {title: 'Send VHF Schedule' },
-                <PanelBarItemModel> {title: 'Send Proximity GPS Schedule' },
-                <PanelBarItemModel> {title: 'Clear Proximity Schedule' },
-                <PanelBarItemModel> {title: 'Send Iridium Schedule' },
-                <PanelBarItemModel> {title: 'Clear Iridium Schedule' },
-                <PanelBarItemModel> {title: 'Send Proximity Schedule' },
-                <PanelBarItemModel> {title: 'Send Activity Schedule' }
-
-            ]
-        },
-        <PanelBarItemModel>{
-            title:'Remote Configuration',children:[
-                <PanelBarItemModel>{ title: 'Configure Iridium Mode'},
-                <PanelBarItemModel>{ title:'Iridium Position Transmission'},
-                <PanelBarItemModel>{title:'Mortality and Hibernation'},
-                <PanelBarItemModel>{title: 'Drop-Off Release'}
-            ]
-        },
-        <PanelBarItemModel>{
-            title:'Proximity Remote Setup', children:[
-                {title:'Proximity Mode'},
-                {title:'Proximity Interval'},
-                {title:'Proximity Duration'},
-                {title:'Proximity Active Time'},
-                {title:'Proximity Transmission'}
-            ]
-        },
-        <PanelBarItemModel>{
-            title:'Virtual Fence Setup',children:[
-                {title:'Send Virtual Fence'},
-                {title:'Virtual Fence Events'},
-                {title:'Clear Virtual Fence'}
-            ]
-        }
-
-
-        
-    ];
-    public _schedulePanelItems:any[];
-    
+    public schedulePanelItems:any[];
+    public remoteConfigPanelItems:any[];
+    public proximityRemoteSetupPanelItems:any[];
+    public virtualFenceSetupPanelItems:any[];
+    public gridData:GridDataResult;
     constructor(private deviceConfigService:DeviceConfigService, private ideviceConfigService:IDeviceConfigService,
                 private menuService:MenuService)
     {
-        this._schedulePanelItems=this.menuService.panelItems;
+        this.schedulePanelItems=this.menuService.schedulepanelItems;
+        this.remoteConfigPanelItems=this.menuService.remoteConfigPanelItems;
+        this.proximityRemoteSetupPanelItems=this.menuService.proximityRemoteSetupPanelItems;
+        this.virtualFenceSetupPanelItems=this.menuService.virtualFenceSetupPanelItems;
+        this.gridData=process(DeviceData,this.state);
     }
    
-
     selectedPanelItem(event:any){
         console.log("event nature:",event);
         this.deviceConfigService.deviceConfigName=event.target.textContent;
@@ -94,7 +65,25 @@ export class DeviceConfigurationComponent{
 
     }
 
-    includeDevice($event){
+
+    public dataStateChange(state: DataStateChangeEvent): void {
+        this.state = state;
+        this.gridData = process(DeviceData,this.state);
+    }
+    public onKeysChange(event:RowArgs){
+        this.mySelection.push(event.dataItem);
+        this.mySelection=this.mySelection.filter(element=>element!==undefined);
+        
+        console.log("selection:",this.mySelection);
+    }
+
+    includeDevice(deviceList:any[]){
+       deviceList.forEach(device =>{
+        let elem={'DeviceID':device};
+        this.deviceConfigService.selectedDevices.push(elem);
+
+       });
+        console.log("devices are ",this.ideviceConfigService.selectedDevices);
         alert("the device(s) has been added ");
     }
 

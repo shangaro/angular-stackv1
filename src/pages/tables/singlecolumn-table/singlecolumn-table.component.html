@@ -1,0 +1,13 @@
+
+<kendo-grid 
+[data]="deviceConfigService.selectedDevices"
+[selectable]="true"
+[selectedKeys]="selection"
+[kendoGridSelectBy]="'DeviceID'"
+(selectedKeysChange)="onKeysChange($event)">
+    <kendo-grid-column title="Sel ID" field="DeviceID"></kendo-grid-column>
+</kendo-grid>
+<button kendoButton (click)="removeItems(selection)">Remove>></button>
+
+
+

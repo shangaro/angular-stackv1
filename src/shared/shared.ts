@@ -6,8 +6,7 @@ import { SignInComponent } from '../pages/framework/signin-user/signin-user.comp
 import { DeviceConfigurationComponent } from '../pages/content/device-configuration/device-configuration.component';
 import { ListViewComponent } from '../pages/content/listview/listview.component';
 import { SettingsComponent } from '../pages/content/settings/settings.components';
-import { UploadTableComponent } from '../pages/tables/upload-table/upload-table.component';
-import { PanelRouterComponent } from '../pages/framework/panel-router-destination/panel-router.component';
+import { UploadScheduleFormComponent } from '../pages/forms/upload-schedule-form/upload-schedule-form.component';
 
 
 export const  routes:Routes=[
@@ -36,14 +35,14 @@ export const  routes:Routes=[
                     path:'scheduling',
                     children:[
                         {path:'',redirectTo:'device-configuration',pathMatch:'full'},
-                        {path:'send-gps-schedule',component:UploadTableComponent},
-                        {path:'send-vhf-schedule',component:UploadTableComponent},
-                        {path:'send-proximity-gps-schedule',component:UploadTableComponent},
-                        {path:'clear-proximity-gps-schedule',component:UploadTableComponent},
-                        {path:'send-iridium-schedule',component:UploadTableComponent},
-                        {path:'clear-iridium-schedule',component:UploadTableComponent},
-                        {path:'send-proximity-schedule',component:UploadTableComponent},
-                        {path:'send-activity-schedule',component:UploadTableComponent},
+                        {path:'send-gps-schedule',component:UploadScheduleFormComponent},
+                        {path:'send-vhf-schedule',component:UploadScheduleFormComponent},
+                        {path:'send-proximity-gps-schedule',component:UploadScheduleFormComponent},
+                        {path:'clear-proximity-gps-schedule',component:UploadScheduleFormComponent},
+                        {path:'send-iridium-schedule',component:UploadScheduleFormComponent},
+                        {path:'clear-iridium-schedule',component:UploadScheduleFormComponent},
+                        {path:'send-proximity-schedule',component:UploadScheduleFormComponent},
+                        {path:'send-activity-schedule',component:UploadScheduleFormComponent},
                         {path: '**', component:DeviceConfigurationComponent}
                     
                     ]

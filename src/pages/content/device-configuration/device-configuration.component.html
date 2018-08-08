@@ -6,12 +6,38 @@
         <kendo-panelbar class="panel-bar"(click)="selectedPanelItem($event)">
                 <kendo-panelbar-item id="1" title="Scheduling">
                     <kendo-panelbar-item
-                        *ngFor="let item of _schedulePanelItems"
+                        *ngFor="let item of schedulePanelItems"
                         [id]="item.id"
                         [title]="item.title"
                         [routerLink]="item.route">
                     </kendo-panelbar-item>
                 </kendo-panelbar-item>
+                <kendo-panelbar-item id="2" title="Remote Configuration">
+                    <kendo-panelbar-item
+                    *ngFor="let item of remoteConfigPanelItems"
+                    [id]="item.id"
+                    [title]="item.title"
+                    [routerLink]="item.route">
+                    </kendo-panelbar-item>
+                </kendo-panelbar-item>
+
+                <kendo-panelbar-item id="3" title="Proximity Remote Setup">
+                        <kendo-panelbar-item
+                        *ngFor="let item of proximityRemoteSetupPanelItems"
+                        [id]="item.id"
+                        [title]="item.title"
+                        [routerLink]="item.route">
+                        </kendo-panelbar-item>
+                    </kendo-panelbar-item>
+                    <kendo-panelbar-item id="4" title="Virtual Fence Setup">
+                            <kendo-panelbar-item
+                            *ngFor="let item of virtualFenceSetupPanelItems"
+                            [id]="item.id"
+                            [title]="item.title"
+                            [routerLink]="item.route">
+                            </kendo-panelbar-item>
+                        </kendo-panelbar-item>
+
             </kendo-panelbar>
     </div>
 
@@ -25,8 +51,25 @@
         [textField]="'viewValue'"
         [valueField]="'value'"></kendo-dropdownlist>
     
-        <fw-device-config-table class="device-config-table"></fw-device-config-table>
-        <button kendoButton (click)="includeDevice($event)">Include>></button>
+        <kendo-grid class="device-config-table"
+        [data]="gridData"
+                [pageSize]="state.take"
+                [skip]="state.skip"
+                [sort]="state.sort"
+                [filter]="state.filter"
+                [sortable]="true"
+                [pageable]="true"
+                [filterable]="true"
+                [selectable]="true"
+                [selectedKeys]="mySelection"
+                [kendoGridSelectBy]="'DeviceID'"
+                (selectedKeysChange)="onKeysChange($event)"
+                (dataStateChange)="dataStateChange($event)">
+        
+            <kendo-grid-column field="DeviceID" title="Device ID">
+            </kendo-grid-column>
+        </kendo-grid>
+        <button kendoButton (click)="includeDevice(mySelection)">Include>></button>
     </div>
 
 

@@ -44,7 +44,10 @@ export class MenuService implements OnDestroy{
    
      
     menuItems:Array<IMenuItem>=initialMenuItems;
-    panelItems:Array<IPanelItem>=schedulePanelItems;
+    public schedulepanelItems:Array<IPanelItem>=schedulePanelItems;
+    public remoteConfigPanelItems:IPanelItem[]=remoteConfigPanelItems;
+    public proximityRemoteSetupPanelItems:IPanelItem[]=proximityRemoteSetupPanelItems;
+    public virtualFenceSetupPanelItems:IPanelItem[]=virtualFenceSetupPanelItems;
     isVertical:boolean=false;
     isSmallScreenMenu:boolean=false;
 
@@ -68,6 +71,23 @@ let schedulePanelItems:IPanelItem[]=[
     {id:'1.6',title:'Clear Iridium Schedule',route:'./scheduling/clear-iridium-schedule'},
     {id:'1.7',title:'Send Proximity Schedule',route:'./scheduling/send-proximity-schedule'},
     {id:'1.8',title:'Send Activity Schedule',route:'./scheduling/send-activity-schedule'}
+];
+let remoteConfigPanelItems:IPanelItem[]=[
+    {id:'2.1',title:'Configure Iridium Mode',route:'./remote-configuration/configure-iridium-mode'},
+    {id:'2.2',title:'Iridium Position Transmission',route:'./remote-configuration/iridium-position-transmission'},
+    {id:'2.3',title:'Mortality and Hibernation',route:'./remote-configuration/mortality-and-hibernation'},
+    {id:'2.4',title:'Trigger Drop-Off Release',route:'./remote-configuration/trigger-drop-off-release'}
+];
+let proximityRemoteSetupPanelItems:IPanelItem[]=[
+    {id:'3.1',title:'Proximity Mode',route:'./proximity-remote-setup/proximity-mode'},
+    {id:'3.2',title:'Proximity Interval',route:'./proximity-remote-setup/proximity-duration'},
+    {id:'3.3',title:'Proximity Duration',route:'./proximity-remote-setup/proximity-active-time'},
+    {id:'3.4',title:'Proximity Transmission',route:'./proximity-remote-setup/proximity-transmission'}
+];
+let virtualFenceSetupPanelItems:IPanelItem[]=[
+    {id:'4.1',title:'Send Virtual Fence',route:'./virtual-fence-setup/send-virtualFence'},
+    {id:'4.2',title:'Virtual Fence Events',route:'./virtual-fence-setup/virtual-fence-events'},
+    {id:'4.3',title:'Clear Virtual Fence',route:'./virtual-fence-setup/clear-virtual-fence'}
 ];
 
 interface IPanelItem{

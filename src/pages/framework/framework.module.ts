@@ -34,16 +34,16 @@ import { GridModule, PDFModule,ExcelModule } from '@progress/kendo-angular-grid'
 import { DeviceConfigurationComponent } from '../content/device-configuration/device-configuration.component';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { LayoutModule } from '@progress/kendo-angular-layout';
-import { DeviceConfigurationTableComponent } from '../tables/device-configuration-table/device-configuration-table.component';
 import { UploadInterceptor } from '../../interceptors/upload.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UploadModule } from '@progress/kendo-angular-upload';
-import { UploadTableComponent } from '../tables/upload-table/upload-table.component';
 import { DeviceConfigService } from '../../services/device-config.service';
 import { IDeviceConfigService } from '../../shared/class-interface/idevice-config.service';
 import { ListViewComponent } from '../content/listview/listview.component';
 import { ListViewTableComponent } from '../tables/listview-table/listview-table.component';
 import { PanelRouterComponent } from './panel-router-destination/panel-router.component';
+import { SingleColumnTableComponent } from '../tables/singlecolumn-table/singlecolumn-table.component';
+import { UploadScheduleFormComponent } from '../forms/upload-schedule-form/upload-schedule-form.component';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -66,8 +66,8 @@ import { PanelRouterComponent } from './panel-router-destination/panel-router.co
     DropDownsModule,
     LayoutModule,
     MatProgressSpinnerModule,
-    UploadModule
-
+    UploadModule,
+  
   ],
   declarations: [
     FrameworkComponent,
@@ -89,10 +89,10 @@ import { PanelRouterComponent } from './panel-router-destination/panel-router.co
     MapWidgetComponent,
     DatePickerComponent,
     DeviceConfigurationComponent,
-    DeviceConfigurationTableComponent,
-    UploadTableComponent,
+    SingleColumnTableComponent,
     ListViewComponent,
-    PanelRouterComponent
+    PanelRouterComponent,
+    UploadScheduleFormComponent
   ],
   providers: [
     FrameworkConfigService,
