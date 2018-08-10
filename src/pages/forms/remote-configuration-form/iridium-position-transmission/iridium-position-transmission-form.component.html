@@ -1,0 +1,9 @@
+<fw-singlecolumn-table></fw-singlecolumn-table>
+<div class="container">
+    <div class="form-title">Configure {{deviceConfigService.getDeviceConfigName()}}</div>
+    <div class="dropDown">
+        <label class="k-dropdown-label" for="d1"><strong>Position Transmission</strong></label>
+        <kendo-dropdownlist [data]="positionTransmission"[(ngModel)]="selectedPosition"></kendo-dropdownlist>
+    </div>
+    <button kendoButton [icon]="'fa fa-file fa-fw'"(click)="PostRequest(selectedPosition)">Transmit</button>
+</div>

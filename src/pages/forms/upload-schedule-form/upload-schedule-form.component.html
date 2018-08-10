@@ -5,9 +5,10 @@
         <p *ngIf=deviceConfigService.hasFirstLetterVowel>Upload an {{deviceConfigService.getDeviceConfigName()}}</p>
     
         <kendo-upload
-            [saveUrl]="deviceConfigService.hasFirstLetterVoweluploadSaveUrl"
+            [saveUrl]="uploadSaveUrl"
             [removeUrl]="uploadRemoveUrl"
-            [restrictions]="fileRestrictions">
+            [restrictions]="{allowedExtensions:['.'+deviceConfigService.getFileExtensionName().toLowerCase()]}"
+            [autoUpload]="false">
       </kendo-upload>
       <p>  
          Select only files with "{{deviceConfigService.getFileExtensionName()}}" extension</p>

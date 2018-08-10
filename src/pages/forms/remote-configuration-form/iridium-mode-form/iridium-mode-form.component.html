@@ -1,0 +1,14 @@
+<fw-singlecolumn-table></fw-singlecolumn-table>
+<div class="container">
+        <div class="form-title">{{deviceConfigService.getDeviceConfigName()}}</div>
+    <div class ="iridium-dropdown">
+        <label class="k-dropdown-label" for="d1"><strong>Iridium Mode</strong></label>
+        <kendo-dropdownlist id="d1" [data]="iridiumMode"[(ngModel)]="selectedIridiumMode"></kendo-dropdownlist>
+    
+    </div>
+    <div class="activity-dropdown">
+        <label class="k-dropdown-label" for="d2"><strong>Activity Data per Fix:</strong></label>
+        <kendo-dropdownlist id="d2" [data]="activityDataPerFix" [(ngModel)]="selectedActivityData"></kendo-dropdownlist>
+    </div>
+    <button kendoButton [iconClass]="'fa fa-file fa-fw'" (click)="PostForm()">Transmit</button>
+</div>

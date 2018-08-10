@@ -1,0 +1,29 @@
+<fw-singlecolumn-table></fw-singlecolumn-table>
+<div class="container">
+    <div class="form-title">Configure {{deviceConfigService.getDeviceConfigName()}}</div>
+    <p><strong>Parameter to Change:</strong></p>
+    <div class="dropdown">
+        <label class="k-switch-label" for="d1"><strong>Mortality Mode</strong></label>
+        <kendo-switch [(ngModel)]="checked" id=d1></kendo-switch>
+    </div>
+    <div class="dropdown" *ngIf="checked">
+       <label class="k-dropdown-label"for="d2"><strong>Mortality Period[hrs]</strong></label>
+        <kendo-numerictextbox
+            [value]="value" id="d2" [min]="0" [max]="1000" [autoCorrect]="autoCorrect">
+        </kendo-numerictextbox>
+    </div>
+    <div class="dropdown">
+        <label class="k-dropdown-label" for="d3"><strong>Hibernation</strong></label>
+        <div class="dropdownblock">
+            <div class="dropdown">
+                <label for="d3" class="k-dropdown-label"><strong>Delay[hrs]:</strong></label>
+                <kendo-dropdownlist id="d3"[data]="timeList" [(ngModel)]="selectedTime"></kendo-dropdownlist>
+            </div>
+            <div class="dropdown">
+                <label for="d4" class="k-dropdown-label"><strong>Wakeup:</strong></label>&nbsp;&nbsp;
+                <kendo-dropdownlist id="d4"[data]="wakeupTime" [(ngModel)]="selectedWakeupTime"></kendo-dropdownlist>
+            </div>
+        </div>
+    </div>
+
+</div>

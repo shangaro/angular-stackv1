@@ -16,7 +16,7 @@ export class UploadInterceptor implements HttpInterceptor{
                     total:100
                 }).pipe(delay(1000)));
             
-            const success=of(new HttpResponse({status:200})).pipe(delay(1000));
+            const success=of(new HttpResponse({status:200})).pipe(delay(1000)); // this one should come from backend api
             events.push(success);
             return concat(...events);
         }

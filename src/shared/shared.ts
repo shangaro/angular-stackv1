@@ -7,6 +7,10 @@ import { DeviceConfigurationComponent } from '../pages/content/device-configurat
 import { ListViewComponent } from '../pages/content/listview/listview.component';
 import { SettingsComponent } from '../pages/content/settings/settings.components';
 import { UploadScheduleFormComponent } from '../pages/forms/upload-schedule-form/upload-schedule-form.component';
+import { IridiumModeFormComponent } from '../pages/forms/remote-configuration-form/iridium-mode-form/iridium-mode-form.component';
+import { IridiumPositionTransmissionFormComponent } from '../pages/forms/remote-configuration-form/iridium-position-transmission/iridium-position-transmission-form.component';
+import { MortalityAndHibernationFormComponent } from '../pages/forms/remote-configuration-form/mortality-and-hibernation-form/mortality-and-hibernation-form.component';
+import { TriggerDropOffReleaseFormComponent } from '../pages/forms/remote-configuration-form/trigger-drop-off-form/trigger-dropoff-release-form.component';
 
 
 export const  routes:Routes=[
@@ -45,6 +49,16 @@ export const  routes:Routes=[
                         {path:'send-activity-schedule',component:UploadScheduleFormComponent},
                         {path: '**', component:DeviceConfigurationComponent}
                     
+                    ]
+                },
+                {
+                    path:'remote-configuration',
+                    children:[
+                        { path:'configure-iridium-mode',component:IridiumModeFormComponent},
+                        { path:'iridium-position-transmission',component:IridiumPositionTransmissionFormComponent},
+                        { path:'mortality-and-hibernation',component:MortalityAndHibernationFormComponent},
+                        { path:'trigger-drop-off-release',component:TriggerDropOffReleaseFormComponent}
+
                     ]
                 }
             ]

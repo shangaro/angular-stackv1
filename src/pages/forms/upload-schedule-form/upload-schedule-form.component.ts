@@ -15,15 +15,24 @@ export class UploadScheduleFormComponent{
 
     constructor(public deviceConfigService:IDeviceConfigService){
     this.isFirstLetterVowel=this.deviceConfigService.hasFirstLetterVowel;
-
     }
 
     uploadSaveUrl='saveUrl'; // should represent an API endpoint to submit files
     uploadRemoveUrl='removeUrl'; // should reporesent an API endpoint to submit files
     fileRestrictions:FileRestrictions={
-    allowedExtensions:['.grf','bsf','acf','brf','psf','gsf'],
+    // allowedExtensions:['.grf','.bsf','.acf','.brf','.psf','.gsf'],
+    allowedExtensions:[this.getCurrentFileExtension(this.deviceConfigService.getFileExtensionName())],
     maxFileSize:100000
     };
 
-  
+    
+
+  getCurrentFileExtension(filextName:string){
+      let extensionName=filextName.trim().toLowerCase();
+      switch(extensionName){
+          case "grf": return '.grf';
+          case "bsf" : return '.bsf';
+          default : return ;
+      }
+  }
 }

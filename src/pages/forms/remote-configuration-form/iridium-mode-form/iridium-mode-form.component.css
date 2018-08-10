@@ -1,0 +1,26 @@
+:host{
+    display:flex;
+    flex-grow:1;
+    align-items:flex-start;
+    justify-content:flex-end;
+}
+.iridium-dropdown{
+    display:inline-flex;
+    font-size:14px;
+}
+.activity-dropdown{
+    display:inline-flex;
+    font-size:14px;
+}
+fw-singlecolumn-table{
+    flex:0 1 150px;
+}
+.container{
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:space-between;
+}
+.form-title{
+    text-align:center;
+    display:block;
+}

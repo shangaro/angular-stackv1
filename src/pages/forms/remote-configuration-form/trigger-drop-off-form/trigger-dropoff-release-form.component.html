@@ -1,0 +1,9 @@
+<fw-singlecolumn-table></fw-singlecolumn-table>
+<div class="container">
+    <div class="form-title">{{deviceConfigService.getDeviceConfigName()}}</div>
+    <div class="dropdown">
+        <label class="k-dropdown-label" for="d1"><strong>Release Code:</strong></label>
+        <kendo-dropdownlist id="d1" [data]="releaseCodes"[(ngModel)]="selectedCode"></kendo-dropdownlist>
+    </div>
+    <button kendoButton>Transmit</button>
+</div>

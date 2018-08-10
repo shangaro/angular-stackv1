@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { IDeviceConfigService } from '../../../shared/class-interface/idevice-config.service';
-import { RowArgs } from '../../../../node_modules/@progress/kendo-angular-grid';
-import { Observable, of } from '../../../../node_modules/rxjs';
+import { RowArgs } from '@progress/kendo-angular-grid';
+import { Observable, of } from 'rxjs';
 @Component({
     selector:'fw-singlecolumn-table',
     templateUrl:'./singlecolumn-table.component.html',

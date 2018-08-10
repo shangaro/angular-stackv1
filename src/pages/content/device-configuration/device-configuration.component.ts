@@ -4,7 +4,7 @@ import { DeviceConfigService } from '../../../services/device-config.service';
 import { IDeviceConfigService } from '../../../shared/class-interface/idevice-config.service';
 import { MenuService } from '../../../services/menu.service';
 import { State,process } from '@progress/kendo-data-query';
-import { GridDataResult, DataStateChangeEvent, RowArgs } from '../../../../node_modules/@progress/kendo-angular-grid';
+import { GridDataResult, DataStateChangeEvent, RowArgs } from '@progress/kendo-angular-grid';
 import { DeviceData } from '../../../shared/deviceData';
 import { IDevice } from '../../tables/singlecolumn-table/singlecolumn-table.component';
 @Component({

@@ -31,6 +31,7 @@ import {ButtonModule, ButtonGroupModule} from '@progress/kendo-angular-buttons';
 import { DateInputsModule, DateInputComponent } from '@progress/kendo-angular-dateinputs';
 import { DatePickerComponent } from '../widgets/datepicker/datepicker.component';
 import { GridModule, PDFModule,ExcelModule } from '@progress/kendo-angular-grid';
+import {InputsModule} from '@progress/kendo-angular-inputs'
 import { DeviceConfigurationComponent } from '../content/device-configuration/device-configuration.component';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { LayoutModule } from '@progress/kendo-angular-layout';
@@ -44,6 +45,10 @@ import { ListViewTableComponent } from '../tables/listview-table/listview-table.
 import { PanelRouterComponent } from './panel-router-destination/panel-router.component';
 import { SingleColumnTableComponent } from '../tables/singlecolumn-table/singlecolumn-table.component';
 import { UploadScheduleFormComponent } from '../forms/upload-schedule-form/upload-schedule-form.component';
+import { IridiumModeFormComponent } from '../forms/remote-configuration-form/iridium-mode-form/iridium-mode-form.component';
+import { IridiumPositionTransmissionFormComponent } from '../forms/remote-configuration-form/iridium-position-transmission/iridium-position-transmission-form.component';
+import { MortalityAndHibernationFormComponent } from '../forms/remote-configuration-form/mortality-and-hibernation-form/mortality-and-hibernation-form.component';
+import { TriggerDropOffReleaseFormComponent } from '../forms/remote-configuration-form/trigger-drop-off-form/trigger-dropoff-release-form.component';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -67,6 +72,7 @@ import { UploadScheduleFormComponent } from '../forms/upload-schedule-form/uploa
     LayoutModule,
     MatProgressSpinnerModule,
     UploadModule,
+    InputsModule
   
   ],
   declarations: [
@@ -92,7 +98,11 @@ import { UploadScheduleFormComponent } from '../forms/upload-schedule-form/uploa
     SingleColumnTableComponent,
     ListViewComponent,
     PanelRouterComponent,
-    UploadScheduleFormComponent
+    UploadScheduleFormComponent,
+    IridiumModeFormComponent,
+    IridiumPositionTransmissionFormComponent,
+    MortalityAndHibernationFormComponent,
+    TriggerDropOffReleaseFormComponent
   ],
   providers: [
     FrameworkConfigService,
