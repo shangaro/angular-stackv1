@@ -26,7 +26,7 @@ export class TriggerDropOffReleaseFormComponent{
         "CA","CB","CC","CD","CE","CF","D0","D1","D2","D3","D4","D5","D6","D7","D8","D9",
         "DD","DB","DC","DD","DE","DF","E0","E1","E2","E3","E4","E5","E6","E7","E8","E9",
         "EE","EB","EC","EE","EE","EF","F0","F1","F2","F3","F4","F5","F6","F7","F8","F9",
-        "FF","FB","FC","FF","FF","FF"
+        "FA","FB","FC","FD","FE","FF"
 
     ];
     public selectedCode:string=" ";

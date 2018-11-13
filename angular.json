@@ -31,7 +31,10 @@
               "node_modules/bootstrap/dist/css/bootstrap-grid.css",
               "node_modules/font-awesome/css/font-awesome.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/knockout/build/output/knockout-latest.js"
+              
+            ]
           },
           "configurations": {
             "production": {

@@ -46,6 +46,7 @@
     "@progress/kendo-theme-bootstrap": "^2.13.7",
     "@progress/kendo-theme-default": "latest",
     "@types/googlemaps": "3.30.11",
+    "@types/node": "~8.9.4",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
@@ -54,7 +55,8 @@
     "moment": "2.22.2",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.0.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "knockout": "^3.4.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
@@ -63,7 +65,6 @@
     "@angular/language-service": "^6.0.3",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -75,6 +76,7 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~2.7.2"
+    "typescript": "~2.7.2",
+    "@types/knockout": "^3.4.59"
   }
 }

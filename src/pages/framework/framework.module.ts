@@ -49,6 +49,7 @@ import { IridiumModeFormComponent } from '../forms/remote-configuration-form/iri
 import { IridiumPositionTransmissionFormComponent } from '../forms/remote-configuration-form/iridium-position-transmission/iridium-position-transmission-form.component';
 import { MortalityAndHibernationFormComponent } from '../forms/remote-configuration-form/mortality-and-hibernation-form/mortality-and-hibernation-form.component';
 import { TriggerDropOffReleaseFormComponent } from '../forms/remote-configuration-form/trigger-drop-off-form/trigger-dropoff-release-form.component';
+import { JqSliderComponent } from '../widgets/jqslider/jqslider.component';
 @NgModule({
   imports: [
     FontAwesomeModule,
@@ -72,7 +73,7 @@ import { TriggerDropOffReleaseFormComponent } from '../forms/remote-configuratio
     LayoutModule,
     MatProgressSpinnerModule,
     UploadModule,
-    InputsModule
+    InputsModule    
   
   ],
   declarations: [
@@ -102,7 +103,8 @@ import { TriggerDropOffReleaseFormComponent } from '../forms/remote-configuratio
     IridiumModeFormComponent,
     IridiumPositionTransmissionFormComponent,
     MortalityAndHibernationFormComponent,
-    TriggerDropOffReleaseFormComponent
+    TriggerDropOffReleaseFormComponent,
+    JqSliderComponent
   ],
   providers: [
     FrameworkConfigService,
