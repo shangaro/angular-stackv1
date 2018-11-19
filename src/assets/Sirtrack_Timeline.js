@@ -1,3 +1,5 @@
+import { Sirtrack } from "./Sirtrack.Container";
+
 /**
  * Copyright (C) 2008, 2009 FBK Foundation, (http://www.fbk.eu)
  * Author: Federico Scrinzi @ SoNet Group
@@ -13,6 +15,7 @@
  * jQuery-UI Slider
  */
 
+ 
 Sirtrack.renderDate =(function(datesec) {
     if (datesec)
       return datesec.toUTCString();
@@ -183,7 +186,7 @@ Sirtrack.renderDate =(function(datesec) {
         }
   };
    
-  Sirtrack.Timeline = function( options ){
+  Sirtrack_Timeline = function( options ){
       var map = options.map,
       display_layers = [],
       current_data = undefined,

@@ -1,4 +1,4 @@
-Sirtrack = (function() {
+export var Sirtrack = (function() {
 
   var helpdialog = function(page, title){
     return $('<div></div>').dialog({

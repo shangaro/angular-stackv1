@@ -56,7 +56,8 @@
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.0.0",
     "zone.js": "^0.8.26",
-    "knockout": "^3.4.2"
+    "knockout": "^3.4.2",
+    "openlayers": "^4.6.5"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
@@ -77,6 +78,7 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2",
-    "@types/knockout": "^3.4.59"
+    "@types/knockout": "^3.4.59",
+    "@types/openlayers": "^4.6.12"
   }
 }

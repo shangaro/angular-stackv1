@@ -1,5 +1,5 @@
 
-var filter= Sirtrack.Filters = (function(){
+  export var Sirtrack_Filters = (function(){
 
     var S = Sirtrack,
 
