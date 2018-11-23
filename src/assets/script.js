@@ -1,26 +1,7 @@
+$(function() {
 
-declare var jQuery:any;
-declare var $:any;
-
-import { Component, OnInit } from "@angular/core";
-import { DeviceConfigService } from "src/services/device-config.service";
-
-@Component({
-    selector:'fw-slider',
-    templateUrl:'./jqslider.component.html',
-    styleUrls:['./jqslider.component.html']
-})
-    
-
-export class JqSliderComponent{
-  
-constructor(){
-
-  $(document).ready(function(){
-
-
-     // function to create slider ticks
-     var setSliderTicks = function() {
+    // function to create slider ticks
+    var setSliderTicks = function() {
       // slider element
       var $slider = $('.slider');
       var max = $slider.slider("option", "max");
@@ -55,7 +36,7 @@ constructor(){
       // set min and maximum values
       // day hours in this example
       min: 0,
-      max: 29,
+      max: 24,
       // step
       // quarter of an hour in this example
       step: 0.25,
@@ -65,18 +46,25 @@ constructor(){
       tooltips: true,
       // current data
       handles: [{
-        value: 1,
-        type: "startDate"
+        value: 7,
+        type: "wake"
       }, {
-        value: 8,
-        type: "endDate"
+        value: 10,
+        type: "leave"
+      }, {
+        value: 15,
+        type: "return"
+      }, {
+        value: 22,
+        type: "sleep"
       }],
       // display type names
       showTypeNames: true,
       typeNames: {
-        'startDate':'Start Date',
-        'endDate':'End Date',
-        'Date':''
+        'wake': 'Wake Up',
+        'leave': 'Leave',
+        'return': 'Return',
+        'sleep': 'Sleep'
       },
       // main css class (of unset data)
       mainClass: 'sleep',
@@ -128,10 +116,4 @@ constructor(){
       /*if ($(this).parent().find('a.ui-state-active').length)
         $(this).toggleClass('ui-state-active');*/
     });
-  
   });
-}
-}
-
-
-

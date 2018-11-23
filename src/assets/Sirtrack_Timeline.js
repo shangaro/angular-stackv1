@@ -92,50 +92,7 @@ Sirtrack.renderDate =(function(datesec) {
   
           $(handle).attr("data-bind", "tooltip: Sirtrack.Filters.past_seconds");
     
-          ko.utils.registerEventHandler(element, "slide", function() {
-            var slider = $(element);
-        
-            var observable = valueAccessor();
-            var values = slider.slider("values");
-        
-            if (observable[0]() != values[0]) {
-              observable[0](values[0]);
-            }
-        
-            if (observable[1]() != values[1]) {
-              observable[1](values[1]);
-            }
-        
-          });
-    
-          ko.utils.registerEventHandler(element, "slidestop", function() {
-            var slider = $(element);
-            var observable = valueAccessor();
-            var values = slider.slider("values");
-    
-            if (observable[0]() == values[0] && observable[1]() == values[1])
-              return;
-    
-            if (observable[0]() != values[0]) {
-              observable[0](values[0]);
-              var lowerlimit = Math.ceil(Sirtrack.Filters.first() + 
-                                    (Sirtrack.Filters.current_date() - 
-                                     Sirtrack.Filters.first()) * (values[0] / 100.0));
-              
-              if( !isNaN(lowerlimit) )
-                Sirtrack.Filters.lowerlimit(new Date(lowerlimit));
-            }
-            
-            if (observable[1]() != values[1]) {
-              observable[1](values[1]);
-              var past_seconds = Math.ceil(Sirtrack.Filters.first() + 
-                                      (Sirtrack.Filters.current_date() - 
-                                       Sirtrack.Filters.first()) * (values[1] / 100.0));
-              if( !isNaN(past_seconds) )
-                Sirtrack.Filters.past_seconds(new Date(past_seconds));
-            }
-            Sirtrack.Filters.redraw();
-          });
+          
       },
       
       update : function(element, valueAccessor, viewModel) {
