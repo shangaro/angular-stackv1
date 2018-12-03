@@ -45,7 +45,6 @@
     "@progress/kendo-drawing": "^1.0.0",
     "@progress/kendo-theme-bootstrap": "^2.13.7",
     "@progress/kendo-theme-default": "latest",
-    "@types/googlemaps": "3.30.11",
     "@types/node": "~8.9.4",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.1.1",
@@ -57,7 +56,12 @@
     "rxjs-compat": "^6.0.0",
     "zone.js": "^0.8.26",
     "knockout": "^3.4.2",
-    "openlayers": "^4.6.5"
+    "openlayers": "^4.6.5",
+    "lodash": "^4.17.11",
+    "google-maps": "^3.3.0",
+    "@google/markerclusterer": "^1.0.3",
+    "@google/maps": "^0.5.5",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
@@ -79,6 +83,8 @@
     "tslint": "~5.9.1",
     "typescript": "~2.7.2",
     "@types/knockout": "^3.4.59",
-    "@types/openlayers": "^4.6.12"
+    "@types/openlayers": "^4.6.12",
+    "@types/lodash": "^4.14.118",
+    "@types/google-maps": "^3.2.0"
   }
 }

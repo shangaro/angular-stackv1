@@ -72,11 +72,11 @@ constructor(){
         type: "endDate"
       }],
       // display type names
-      showTypeNames: true,
+      showTypeNames: false,
       typeNames: {
         'startDate':'Start Date',
         'endDate':'End Date',
-        'Date':''
+        
       },
       // main css class (of unset data)
       mainClass: 'sleep',

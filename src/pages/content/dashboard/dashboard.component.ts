@@ -1,6 +1,5 @@
-import { } from 'googlemaps';
+
 import { Component, OnInit, ViewChild, Input, ViewChildren } from "@angular/core";
-declare var google:any;
 @Component({
     selector:'content-dashboard',
     templateUrl:'./dashboard.component.html',
@@ -12,18 +11,32 @@ export class DashBoardComponent implements OnInit{
     map:google.maps.Map;
     latitude:any;
     longitude:any;
-   
-    ngOnInit(): void { 
+    t0:number;t1:number;
+    markers:any;
+    markerCluster:any;
+    markersAmount:any;
+    gridSize;
+    minimumClusterSize;
+    
+    constructor(){
 
-        var mapOptions={
-            center: {lat:43.472285,lng:-80.544858},
-            zoom:15
-    
-    
-        };
-        this.map=new google.maps.Map(this.gmapElement.nativeElement,mapOptions);
     }
+
+    initializeMap(){
+        var maps= require('@google/maps');
+        console.log("*maps",maps);
+       
+      
+    }
+
+    
+    
+
+}
+
+
+    
+    
 
   
    
-}
